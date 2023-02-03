@@ -223,7 +223,7 @@ const _constructStartGameEventWithParts = (
       '[PlyCount "0"]',
       '[Mode "nostr"]',
       '',
-      '',
+      ' *', // TODO: chess.js does not parse the pgn correctly -> add fix as PR to the repo!
     ].join('\n'),
   }
 
@@ -341,7 +341,7 @@ export const tryParseJesterId = (possibleJesterId?: unknown): JesterId | null =>
   if (hasValidPrefix === false) return null
 
   try {
-    // @ts-ignore
+    /* eslint-disable @typescript-eslint/no-unused-vars */
     const unusedOnPurpose = jesterIdToGameId(possibleJesterId as JesterId)
     return possibleJesterId as JesterId
   } catch (e) {
