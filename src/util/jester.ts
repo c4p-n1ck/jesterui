@@ -222,6 +222,8 @@ const _constructStartGameEventWithParts = (
       `[FEN "${_validStartFen.value()}"]`,
       '[PlyCount "0"]',
       '[Mode "nostr"]',
+      '',
+      '',
     ].join('\n'),
   }
 
